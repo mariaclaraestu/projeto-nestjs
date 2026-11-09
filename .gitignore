@@ -1,9 +1,10 @@
 node_modules/
 dist/
 logs/
+**/uploads/*
 .env
 .env.*
 !.env.example
-
+!**/uploads/.gitkeep
 
 .DS_Store
