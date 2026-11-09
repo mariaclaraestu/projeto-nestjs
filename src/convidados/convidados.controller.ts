@@ -23,6 +23,12 @@ export class ConvidadosController {
     return this.convidadosService.findAll();
   }
 
+  // GET /convidados/:id
+  @Get(':id')
+  listarUm( @Param('id') id: string) {
+    return this.convidadosService.findOne(+id);
+  }
+
   // POST /convidados
   @Post()
   criar(@Body() createConvidadoDto: CreateConvidadoDto) {
@@ -43,7 +49,7 @@ export class ConvidadosController {
     console.log(`Atualizando idade do convidado com ID: ${id}`);
     return this.convidadosService.updateIdade(+id, updateConvidadoDto);
   }
-
+  
   // DELETE /convidados/:id
   @Delete(':id')
   @HttpCode(HttpStatus.NO_CONTENT)
