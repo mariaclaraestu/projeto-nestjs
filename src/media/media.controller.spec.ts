@@ -1,6 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { MediaController } from './media.controller.js';
+
 describe('MediaController', () => {
+
   let controller: MediaController;
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
@@ -8,9 +10,11 @@ describe('MediaController', () => {
     }).compile();
     controller = module.get<MediaController>(MediaController);
   });
-  it('should be defined', () => {
+
+  it('deve ser definido', () => {
     expect(controller).toBeDefined();
   });
+
   it('uploadFile deve devolver o nome gerado e o tamanho', () => {
     const arquivo = {
       filename: 'abc-123.png',

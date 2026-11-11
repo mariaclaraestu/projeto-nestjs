@@ -26,7 +26,7 @@ describe('LivrosService', () => {
   
   it('findOne deve lançar NotFoundException com a mensagem esperada', () => {
     expect(() => service.findOne(999)).toThrow(
-      new NotFoundException('Livro com ID 999 não localizado em nosso acervo'),
+      new NotFoundException('Livro com ID 999 nao localizado em nosso acervo'),
     );
   });
 });
