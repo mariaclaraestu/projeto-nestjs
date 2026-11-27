@@ -1,114 +1,147 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+  <a href="https://nestjs.com/" target="_blank"><img src="https://nestjs.com/img/logo-small.svg" width="100" alt="NestJS" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<h1 align="center">Projeto NestJS — Backend na Prática</h1>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+<p align="center">
+  Repositório-modelo das aulas de <strong>Backend com NestJS</strong> do curso de <strong>Desenvolvedor Fullstack</strong><br/>
+  <strong>SENAI Digitech — Centro de Referência em TIC RJ</strong>
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+<p align="center">
+  <img src="https://img.shields.io/badge/NestJS-E0234E?style=flat&logo=nestjs&logoColor=white" alt="NestJS" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white" alt="MongoDB" />
+  <img src="https://img.shields.io/badge/Swagger-85EA2D?style=flat&logo=swagger&logoColor=black" alt="Swagger" />
+  <img src="https://img.shields.io/badge/Vitest-6E9F18?style=flat&logo=vitest&logoColor=white" alt="Vitest" />
+</p>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+---
 
-## Project setup
+## Sobre este repositório
 
-```bash
-$ npm install
+Este é o projeto de referência que construo, aula a aula, junto com meus alunos na unidade curricular de Backend do curso de **Desenvolvedor Fullstack** do **SENAI Digitech — Centro de Referência em TIC RJ**.
+
+O desenvolvimento segue a sequência das apostilas oficiais do curso. Cada conteúdo teórico vira código funcionando em sala: os alunos acompanham a implementação, reproduzem os exemplos nos próprios projetos e usam este repositório como gabarito para revisar, comparar soluções e retomar qualquer aula em que tenham faltado.
+
+Por isso o projeto cresce de forma incremental. Ele parte da estrutura básica de uma aplicação NestJS e evolui para uma API documentada, validada, com tratamento de erros, middlewares, upload de mídia e persistência em MongoDB. O repositório acompanha a turma em tempo real e recebe novos commits a cada aula.
+
+## Como navegar pelas aulas
+
+Os commits são numerados de acordo com a aula correspondente. Para ver exatamente o que foi construído em uma aula, abra o [histórico de commits](../../commits/main) e consulte o commit com o número dela.
+
+| Aula | Conteúdo |
+|:---:|---|
+| 07 | Estrutura e fundamentos do NestJS: módulos, controllers e providers |
+| 08 | Route handlers: `GET` e `POST` |
+| 09 | Route handlers: `PUT`, `PATCH` e `DELETE` |
+| 10 | Rotas dinâmicas e parâmetros de rota |
+| 11 | Fluxos de imagem e mídia em APIs (upload com Multer) |
+| 12 | Request e Response avançados |
+| 13 | Middlewares e interceptação de requisições |
+| 15 | Tratamento de erros, exception filters e status codes HTTP |
+| 16 | Validação de dados com schemas Zod e pipes personalizados |
+| 17 | Documentação da API com Swagger (OpenAPI) |
+| 18 | Integração com MongoDB (Mongoose) e segurança |
+
+> A aula 14 foi desenvolvida em um repositório à parte, por isso não aparece nesta sequência.
+
+> 🚧 **Curso em andamento:** novas aulas são adicionadas a este repositório, e a esta tabela, conforme o conteúdo avança.
+
+## O que o projeto aborda
+
+- **Arquitetura NestJS:** módulos, controllers, services, injeção de dependência e DTOs
+- **API REST completa:** CRUD com os verbos HTTP e rotas dinâmicas nos recursos `livros`, `produtos`, `convidados` e `colaboradores`
+- **Manipulação de mídia:** upload e entrega de arquivos com Multer
+- **Middlewares:** registro de logs das requisições
+- **Tratamento de erros:** filtro global de exceções HTTP com respostas padronizadas
+- **Validação:** pipe personalizado com Zod para validar o corpo das requisições
+- **Documentação:** Swagger/OpenAPI gerado a partir do código
+- **Persistência:** MongoDB com Mongoose, local ou no Atlas
+- **Configuração:** variáveis de ambiente com `@nestjs/config`
+- **Qualidade:** testes automatizados com Vitest e Supertest, lint com Oxlint e formatação com Prettier
+
+## Tecnologias
+
+| Categoria | Ferramentas |
+|---|---|
+| Framework | NestJS, Express |
+| Linguagem | TypeScript |
+| Banco de dados | MongoDB, Mongoose |
+| Validação | Zod |
+| Documentação | Swagger (`@nestjs/swagger`) |
+| Upload | Multer |
+| Testes | Vitest, Supertest |
+| Qualidade de código | Oxlint, Prettier |
+
+## Estrutura do projeto
+
+```
+src/
+├── admin/            # Rotas administrativas
+├── colaboradores/    # Recurso persistido no MongoDB (schema Mongoose)
+├── common/pipes/     # Pipe de validação com Zod
+├── convidados/       # CRUD com DTOs, interfaces e service
+├── filtros/          # Filtro global de exceções HTTP
+├── livros/           # CRUD de livros
+├── logger/           # Middleware de log
+├── media/            # Upload e entrega de imagens/arquivos
+├── produtos/         # CRUD de produtos
+├── seguranca/        # Rotas de exemplo de segurança
+├── app.module.ts
+└── main.ts           # Bootstrap da aplicação e configuração do Swagger
 ```
 
-## Compile and run the project
+## Como executar
+
+**Pré-requisitos:** Node.js (LTS) e MongoDB (local ou Atlas).
 
 ```bash
-# development
-$ npm run start
+# 1. Clone o repositório
+git clone https://github.com/fabcurvello/projeto-nestjs.git
+cd projeto-nestjs
 
-# watch mode
-$ npm run start:dev
+# 2. Instale as dependências
+npm install
 
-# production mode
-$ npm run start:prod
+# 3. Configure as variáveis de ambiente
+cp .env.example .env
+# edite o .env e informe a DATABASE_URL do seu MongoDB
+
+# 4. Rode em modo de desenvolvimento
+npm run start:dev
 ```
 
-## Run tests
+A API sobe em `http://localhost:3000` e a documentação interativa (Swagger) fica em **`http://localhost:3000/docs`**.
+
+### Outros comandos
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm run build       # compila o projeto
+npm run start:prod  # executa a versão compilada
+npm run test        # executa os testes
+npm run test:cov    # testes com relatório de cobertura
+npm run lint        # análise estática com Oxlint
+npm run format      # formata o código com Prettier
 ```
 
-## Deployment
+> **Atenção:** nunca faça commit do arquivo `.env` nem de credenciais reais do banco. Use sempre o `.env.example` como referência.
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+## Sobre o professor
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+**Fabricio Curvello** é desenvolvedor e professor de desenvolvimento de software. Leciona no SENAI-RJ desde 1997, em cursos de programação, banco de dados, web e desenvolvimento fullstack, e no Centro Universitário IBMR desde 2018, nos cursos de Análise e Desenvolvimento de Sistemas, Ciência da Computação e Gestão de TI.
 
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
+No backend, trabalha com os alunos a construção de APIs profissionais com NestJS e TypeScript, sempre com foco em boas práticas de arquitetura, validação, documentação e testes, que são as competências cobradas pelo mercado.
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+- LinkedIn: [linkedin.com/in/fabriciocurvello](https://www.linkedin.com/in/fabriciocurvello)
+- YouTube: [@fabriciocurvello](https://www.youtube.com/@fabriciocurvello)
+- GitHub: [github.com/fabcurvello](https://github.com/fabcurvello)
+- Currículo Lattes: [lattes.cnpq.br/2406072276749635](http://lattes.cnpq.br/2406072276749635)
 
-## Observability
+---
 
-In production applications, observability is essential for understanding how your system behaves, detecting issues early, and maintaining reliable performance.
-
-[NestJS Observe](https://observe.nestjs.com) automatically instruments your NestJS application, giving you deep visibility into your system with minimal setup:
-
-- **Distributed tracing:** Follow requests across services and understand how they flow through your system.
-- **Waterfall analysis:** Visualize request execution and identify slow operations, bottlenecks, and unexpected delays.
-- **Performance analysis:** Analyze application performance in real time and quickly pinpoint areas that need optimization.
-- **Metrics:** Track key application and infrastructure metrics to understand system health and performance trends.
-- **Logging:** Centralize and correlate logs with traces and other telemetry to make debugging easier.
-- **Error tracking:** Detect errors quickly and investigate their root causes with the surrounding context.
-- **SLA monitoring:** Track service-level objectives and identify when your application is approaching or exceeding defined thresholds.
-- **Alarms and alerts:** Set up alerts for critical errors, performance degradation, SLA violations, and other anomalies so your team can react quickly.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Auto-instrument your application with [NestJS Observer](https://observer.nestjs.com). Distributed tracing, metrics, and logging made easy. Error tracking and performance monitoring for your NestJS applications.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+<p align="center">
+  Material de apoio às aulas do curso de Desenvolvedor Fullstack — SENAI Digitech, Centro de Referência em TIC RJ.
+</p>

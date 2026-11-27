@@ -16,10 +16,12 @@ import { ProdutosController } from './produtos/produtos.controller.js';
 import { ProdutosService } from './produtos/produtos.service.js';
 import { Produto, ProdutoSchema } from './produtos/schemas/produto.schema.js';
 import { ColaboradoresController } from './colaboradores/colaboradores.controller.js';
+
 @Module({
   imports: [
     // Aula 18: variáveis de ambiente em toda a aplicação.
     ConfigModule.forRoot({ isGlobal: true }),
+
     // Aula 19: conexão com o MongoDB gerenciada pelo Nest
     // (substitui o mongoose.connect() manual do main.ts).
     MongooseModule.forRootAsync({
